@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>start</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h1>Wrongly minified CSS.</h1>
+		<p>
+		When [something] strips quoting, it does not escape the plus (+) character properly, which makes
+		the next paragraph use <em>Comic Sans MS</em> or <em>fantasy</em>.
+		Otherwise, it would be in <em>M+ 1mn</em>, if installed, or another monospace font.
+		</p>
+		<hr />
+		<p id="content">
+			THIS SHOULD NOT BE COMIC SANS.
+		</p>
+		<p id="result">
+		</p>
+		<script src="app.js"></script>
+		<hr />
+		<p>
+		The <code>webpack.config.js</code> file can be modified to disable one of the minified, or both,
+		and see that the CSS is then valid.
+		</p>
+	</body>
+</html>

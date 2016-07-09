@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+set -u
+
+this_dir="$(dirname "${BASH_SOURCE[0]}")"
+this_name="${BASH_SOURCE[0]##*/}"
+
+if [ -e "$this_dir/../node_modules/.bin/$this_name" ]; then
+	exec "$this_dir/../node_modules/.bin/$this_name" "$@"
+else
+	echo "'$this_name' is missing."
+	echo "Installation has to be done through npm."
+fi
