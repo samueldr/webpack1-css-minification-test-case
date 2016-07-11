@@ -18,6 +18,12 @@ module.exports = {
 				exclude: /node_modules/,
 				loader:  ExtractTextPlugin.extract([
 					"css",
+					//
+					// Uncomment this to disable postcss-minify-font-values,
+					// as suggested by @Kovensky
+					// https://github.com/webpack/webpack/issues/2752#issuecomment-231566968
+					// "?minifyFontValues=false",
+					//
 					// Uncomment to disable css-loader's minification.
 					// "?-minimize",
 				].join("")),
